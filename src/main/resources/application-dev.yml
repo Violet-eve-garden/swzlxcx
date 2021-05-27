@@ -1,0 +1,72 @@
+spring:
+  application:
+    name: swzl
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/swzl?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #   数据源其他配置
+    druid:
+      #   数据源其他配置
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: stat,wall,log4j2
+      maxPoolPreparedStatementPerConnectionSize: 20
+      useGlobalDataSourceStat: true
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+      # WebStatFilter配置，说明请参考Druid Wiki，配置_配置WebStatFilter
+      web-stat-filter:
+        enabled: true
+        url-pattern: '/*'
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      # StatViewServlet配置，说明请参考Druid Wiki，配置_StatViewServlet配置
+      stat-view-servlet:
+        enabled: true #是否启用StatViewServlet（监控页面）默认值为false（考虑到安全问题默认并未启动，如需启用建议设置密码或白名单以保障安全）
+        url-pattern: '/druid/*'
+        login-username: 'violet-eve-garden'
+        login-password: 'Zxzuishuaiaaa049'
+        reset-enable: false
+  redis:
+    host: 192.168.143.130
+    port: 6379
+    database: 1
+server:
+  port: 8080
+  servlet:
+    context-path: /wxxcx
+
+logging:
+  level:
+    root: info
+    pers.violet.blog: debug
+  file:
+    path: D:/开发岗/Springboot/博客网站/blog_log/blog-dev
+    name: blog-dev.log
+
+weChat:
+  appid: wx2386e9cc820c6d66
+  secret: 99dad843953f3577a36aca834ddab061
+  code2SessionUrl: "https://api.weixin.qq.com/sns/jscode2session?appid={appid}&secret={secret}&js_code={code}&grant_type=authorization_code"
+
+jwt:
+  secret: emhvdXh1LnJ1YW5qaWFuZ29uZ2NoZW5nNGFkc2Y1YXMyMWN3OGU
+  expiration: 7200
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.xml
+  mapper-locations:
+    - classpath:mybatis/mappers/*.xml

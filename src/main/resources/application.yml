@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+
+  thymeleaf:
+    cache: false
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    view:
+      suffix: .html
+
+

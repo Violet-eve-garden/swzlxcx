@@ -4,6 +4,10 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+/image/
+/logs/
+/src/main/resources/application-private.yml
+
 ### STS ###
 .apt_generated
 .classpath
@@ -32,9 +36,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-./image/
-./logs/
-./src/main/resources/application-private.yml
-
-

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sysu.swzl.dao.GoodsMessageMapper">
+  <resultMap id="BaseResultMap" type="com.sysu.swzl.pojo.GoodsMessage">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="open_id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="title" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="describe" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="type" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="infor_type" javaType="java.lang.Integer" jdbcType="TINYINT" />
+      <arg column="img_path" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, open_id, title, `describe`, `type`, infor_type, img_path, create_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goods_message
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from goods_message
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.sysu.swzl.pojo.GoodsMessage">
+    insert into goods_message (id, open_id, title, 
+      describe, type, infor_type, 
+      img_path, create_time)
+    values (#{id,jdbcType=BIGINT}, #{openId,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{describe,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{inforType,jdbcType=TINYINT}, 
+      #{imgPath,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sysu.swzl.pojo.GoodsMessage">
+    insert into goods_message
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="openId != null">
+        open_id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="describe != null">
+        `describe`,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="inforType != null">
+        infor_type,
+      </if>
+      <if test="imgPath != null">
+        img_path,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="openId != null">
+        #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="describe != null">
+        #{describe,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="inforType != null">
+        #{inforType,jdbcType=TINYINT},
+      </if>
+      <if test="imgPath != null">
+        #{imgPath,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sysu.swzl.pojo.GoodsMessage">
+    update goods_message
+    <set>
+      <if test="openId != null">
+        open_id = #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="describe != null">
+        describe = #{describe,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="inforType != null">
+        infor_type = #{inforType,jdbcType=TINYINT},
+      </if>
+      <if test="imgPath != null">
+        img_path = #{imgPath,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sysu.swzl.pojo.GoodsMessage">
+    update goods_message
+    set open_id = #{openId,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      describe = #{describe,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      infor_type = #{inforType,jdbcType=TINYINT},
+      img_path = #{imgPath,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <!-- 自定义部分 -->
+  <select id="selectGoodsMessageInTimeOrder" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from `goods_message`
+    order by `create_time`
+    <if test="order == true">
+      asc
+    </if>
+    <if test="order == false">
+      desc
+    </if>
+    limit 0, #{num}
+  </select>
+
+  <select id="selectByType" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from `goods_message`
+    where `type` = #{type}
+  </select>
+</mapper>

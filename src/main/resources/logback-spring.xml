@@ -15,7 +15,7 @@
         </encoder>
         <file>${log-dev.path}/blog-dev.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log-dev.path}/blog-dev-%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <fileNamePattern>${log-dev.path}/swzl-dev-%d{yyyy-MM-dd}.%i</fileNamePattern>
             <!--保留历史日志一个月的时间-->
             <maxHistory>30</maxHistory>
             <!--
@@ -34,7 +34,7 @@
         </encoder>
         <file>${log-pro.path}/blog-pro.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log-pro.path}/blog-pro-%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <fileNamePattern>${log-pro.path}/swzl-pro-%d{yyyy-MM-dd}.%i</fileNamePattern>
             <!--保留历史日志一个月的时间-->
             <maxHistory>30</maxHistory>
             <!--

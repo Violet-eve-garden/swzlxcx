@@ -49,7 +49,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic().authenticationEntryPoint(new AjaxAuthenticationEntryPoint())
                 //.and().antMatcher("/login")
                 //.and().authorizeRequests().anyRequest().access("@rbacauthorityservice.hasPermission(request,authentication)")// 自定义权限校验  RBAC 动态 url 认证
+                .and().authorizeRequests().antMatchers("/hello").permitAll()
+                //.and().authorizeRequests().antMatchers("/search/**").permitAll()
                 .and().authorizeRequests().antMatchers("/login").permitAll()
+                .and().authorizeRequests().antMatchers("/img/upload/**").permitAll()
+                .and().authorizeRequests().antMatchers("/push/uploadImg").permitAll()
                 .and().authorizeRequests().antMatchers("/**").hasAuthority("common")
                 .and().authorizeRequests().antMatchers("/admin/**").hasAuthority("admin"); //自定义登录
 

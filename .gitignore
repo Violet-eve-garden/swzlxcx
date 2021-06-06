@@ -18,10 +18,7 @@ target/
 *.iws
 *.iml
 *.ipr
-target/
-logs/
-.mvn
-mvnw*
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -35,3 +32,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+./image/
+./logs/
+./src/main/resources/application-private.yml
+
+

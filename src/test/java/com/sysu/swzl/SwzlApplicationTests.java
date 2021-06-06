@@ -12,4 +12,10 @@ class SwzlApplicationTests {
         // System.out.println(Base64Codec.BASE64URL.encode("zhouxu.ruanjiangongcheng4adsf5as21cw8e"));
     }
 
+    @Test
+    void testTry() {
+        // System.out.println(Base64Codec.BASE64URL.encode("zhouxu.ruanjiangongcheng4adsf5as21cw8e"));
+    }
+
+
 }

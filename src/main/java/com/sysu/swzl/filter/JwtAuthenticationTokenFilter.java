@@ -49,24 +49,33 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         String authToken = request.getHeader(JwtUtil.AUTHORIZATION);
         log.info("token: " + authToken);
 
-        response.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
+        /*
+            token为空或者格式不正确直接进行过滤操作，
+            这种情况下可以访问permitAll的url，
+            访问需要权限的会被拦截
+         */
         if (null == authToken || !authToken.startsWith(JwtUtil.TOKEN_PREFIX)) {
-            filterChain.doFilter(request, response);//token格式不正确
+            // log.info("token格式不正确");
+            filterChain.doFilter(request, response);
             return;
         }
 
         // 校验token (如果token合法会自动续期)
         if (!jwtUtil.weChatVerifyToken(authToken)) {
             response.getWriter().write(JSON.toJSONString(R.error(HttpStatus.FORBIDDEN.value(), "token过期")));
+            log.info("token过期");
             return;
         }
 
-        // 检验请求体里的openId和请求头里的openId是否一致
+        // 检验请求体里的openId和请求头token对应的openId是否一致
         String openId = request.getParameter("openId");
         String openIdFromToken = jwtUtil.getOpenIdFromToken(authToken);
 
         if (openId == null || !openId.equals(openIdFromToken)){
             response.getWriter().write(JSON.toJSONString(R.error(HttpStatus.FORBIDDEN.value(), "token缺失")));
+            log.info("token缺失");
             return;
         }
 

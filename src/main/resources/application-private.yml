@@ -1,0 +1,8 @@
+weChat:
+  appid: wx2386e9cc820c6d66
+  secret: 99dad843953f3577a36aca834ddab061
+  code2SessionUrl: "https://api.weixin.qq.com/sns/jscode2session?appid={appid}&secret={secret}&js_code={code}&grant_type=authorization_code"
+
+jwt:
+  secret: emhvdXh1LnJ1YW5qaWFuZ29uZ2NoZW5nNGFkc2Y1YXMyMWN3OGU
+  expiration: 1800

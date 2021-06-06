@@ -20,6 +20,7 @@ import java.util.Map;
  * @date 2021/5/23 15:15
  */
 @RestController
+@RequestMapping(produces = {"application/json;charset=UTF-8"})
 public class WeChatLoginController {
 
     @Autowired
@@ -30,5 +31,10 @@ public class WeChatLoginController {
         if (!StringUtils.hasText(code))
             return R.error("需要code");
         return weChatService.login(code);
+    }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello world";
     }
 }

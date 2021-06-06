@@ -6,8 +6,10 @@ package com.sysu.swzl.exception;
  */
 public enum BizCodeException {
     UNKNOWN_EXCEPTION(10000, "系统未知异常"),
-    VALID_EXCEPTION(10001, "参数校验异常"),;
-
+    VALID_EXCEPTION(10001, "参数校验异常"),
+    TYPE_EXCEPTION(10002, "不可用类型异常"),
+    FILE_UPLOAD_EXCEPTION(10003, "文件上传异常"),
+    FILENAME_EXCEPTION(10004, "文件名错误"),;
     private int code;
     private String message;
 

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2021/5/24 21:50
  */
 @RestController
-@RequestMapping("/my")
+@RequestMapping(path = "/my",  produces = {"application/json;charset=UTF-8"})
 public class UserInfoController {
 
     @Autowired

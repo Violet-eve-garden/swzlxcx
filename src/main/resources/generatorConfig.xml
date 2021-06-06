@@ -54,7 +54,7 @@
 
 
         <!-- 指定数据表 -->
-        <table tableName="user" domainObjectName="WxUserInfo"
+        <table tableName="upload_file" domainObjectName="UploadFile"
             enableCountByExample="false" enableDeleteByExample="false"
             enableSelectByExample="false" enableUpdateByExample="false"
             selectByExampleQueryId="false">
@@ -62,8 +62,7 @@
 
 
         <!-- 有些表的字段需要指定java类型
-
-        <table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer" >
+        <table schema="DB2ADMIN" tableName="user" domainObjectName="Customer" >
 
           <property name="useActualColumnNames" value="true"/>
 

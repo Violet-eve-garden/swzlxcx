@@ -1,0 +1,1014 @@
+2021-06-04 21:10:29.056  INFO 18128 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 18128 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:10:29.060  INFO 18128 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:10:30.818  INFO 18128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:10:30.821  INFO 18128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:10:30.864  INFO 18128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:10:31.287  INFO 18128 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b08f438' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:10:31.291  INFO 18128 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:10:31.578  INFO 18128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:10:31.586  INFO 18128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:10:31.586  INFO 18128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:10:31.697  INFO 18128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:10:31.697  INFO 18128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2575 ms
+2021-06-04 21:10:33.484  INFO 18128 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 96848e21-b2ba-43df-8cb3-983552e4902d
+
+2021-06-04 21:10:33.588  INFO 18128 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5042e3d0, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c40ffef, org.springframework.security.web.header.HeaderWriterFilter@7f13811b, org.springframework.security.web.authentication.logout.LogoutFilter@373052b5, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@4fd05028, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@766a52f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64aeaf29, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4451f60c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c34365c, org.springframework.security.web.session.SessionManagementFilter@71e7adbb, org.springframework.security.web.access.ExceptionTranslationFilter@43f03c23, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@469a7575]
+2021-06-04 21:10:33.661  INFO 18128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:10:33.671  INFO 18128 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 5.319 seconds (JVM running for 7.81)
+2021-06-04 21:10:49.639  INFO 18128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 21:10:49.641  INFO 18128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 21:10:49.645  INFO 18128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-06-04 21:10:49.672  INFO 18128 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:10:49.766  INFO 18128 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:10:50.160  INFO 18128 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 21:11:08.034  INFO 18128 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:11:08.034  INFO 18128 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:11:26.789  INFO 18128 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiNWc0SHloanpGUDI2T3g3RElUbXRaZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgxOTQ1Mn0.KU3pZCJuJghqYE-HKT9N8kz8FXrli6P0Mb0xPO02CUfkY0h4UFeO3aQOx0KPVWIhNyCuoTG8s-1dnPn1bVpP_w
+2021-06-04 21:11:28.353  INFO 18128 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:11:28.353  INFO 18128 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:11:57.297  INFO 18128 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:11:57.329  INFO 18128 --- [http-nio-8080-exec-6] com.sysu.swzl.controller.PushController  : uploadImg token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiNWc0SHloanpGUDI2T3g3RElUbXRaZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgxOTQ1Mn0.KU3pZCJuJghqYE-HKT9N8kz8FXrli6P0Mb0xPO02CUfkY0h4UFeO3aQOx0KPVWIhNyCuoTG8s-1dnPn1bVpP_w
+2021-06-04 21:11:57.336  INFO 18128 --- [http-nio-8080-exec-6] c.s.swzl.service.Impl.FileServiceImpl    : upload url:D:\开发岗\软件工程\大作业\swzl\image\upload
+2021-06-04 21:11:57.336  INFO 18128 --- [http-nio-8080-exec-6] c.s.swzl.service.Impl.FileServiceImpl    : final filename: ec69015b-f5af-432c-9c6d-ba619c8ab645fBx62IjrGrObae1be73ab88714909d8f13947538a594.jpg
+2021-06-04 21:11:57.336  INFO 18128 --- [http-nio-8080-exec-6] c.s.swzl.service.Impl.FileServiceImpl    : file path: image\upload\ec69015b-f5af-432c-9c6d-ba619c8ab645fBx62IjrGrObae1be73ab88714909d8f13947538a594.jpg
+2021-06-04 21:11:57.456  INFO 18128 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:15:11.243  INFO 18128 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:15:11.610  INFO 18128 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:31:32.424  INFO 19160 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 19160 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:31:32.424  INFO 19160 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:31:33.019  INFO 19160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:31:33.035  INFO 19160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:31:33.051  INFO 19160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:31:33.270  INFO 19160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b08f438' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:31:33.270  INFO 19160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:31:33.473  INFO 19160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:31:33.489  INFO 19160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:31:33.489  INFO 19160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:31:33.552  INFO 19160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:31:33.552  INFO 19160 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2021-06-04 21:31:34.562  INFO 19160 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9deafffb-52b2-4688-9f97-6e8be77516a2
+
+2021-06-04 21:31:34.640  INFO 19160 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@262a1fad, org.springframework.security.web.context.SecurityContextPersistenceFilter@740b6628, org.springframework.security.web.header.HeaderWriterFilter@72443081, org.springframework.security.web.authentication.logout.LogoutFilter@433d9680, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@4fd05028, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@588545ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@766a52f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f0bab7e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6be6931f, org.springframework.security.web.session.SessionManagementFilter@5af5d76f, org.springframework.security.web.access.ExceptionTranslationFilter@4e3f2908, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1de4bee0]
+2021-06-04 21:31:34.689  INFO 19160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:31:34.704  INFO 19160 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 2.786 seconds (JVM running for 4.253)
+2021-06-04 21:31:52.030  INFO 19160 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 21:31:52.030  INFO 19160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 21:31:52.031  INFO 19160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 21:31:52.046  INFO 19160 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:31:52.260  INFO 19160 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:31:52.490  INFO 19160 --- [http-nio-8080-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 21:31:58.042  INFO 19160 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:31:58.043  INFO 19160 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:32:16.277  INFO 19160 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:32:16.549  INFO 19160 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:32:19.664  INFO 19160 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5Ijoic1V3V2ZTMlhLeHFobnFsVXZ5Y0JRZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMDczN30.lDX02ELogIxLBDRpDKGGXzD9vFTskofZSSstIHa_YgJYHpS2MLj0FfdquZJfARc_G7bfSQRT8MszrSy9oHsKwA
+2021-06-04 21:32:20.049  INFO 19160 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:32:20.049  INFO 19160 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:32:50.779  INFO 19160 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5Ijoic1V3V2ZTMlhLeHFobnFsVXZ5Y0JRZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMDczN30.lDX02ELogIxLBDRpDKGGXzD9vFTskofZSSstIHa_YgJYHpS2MLj0FfdquZJfARc_G7bfSQRT8MszrSy9oHsKwA
+2021-06-04 21:33:45.754  INFO 19160 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5Ijoic1V3V2ZTMlhLeHFobnFsVXZ5Y0JRZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMDczN30.lDX02ELogIxLBDRpDKGGXzD9vFTskofZSSstIHa_YgJYHpS2MLj0FfdquZJfARc_G7bfSQRT8MszrSy9oHsKwA
+2021-06-04 21:35:28.652  INFO 19160 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: 
+2021-06-04 21:35:35.635  INFO 19160 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:35:36.422  INFO 19160 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:35:39.468  INFO 19160 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5Ijoia2RJNUp5c0NLcTBsRnBpdVV1VDlidz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMDkzN30.mKmAQTAbLpOIbH2PyusoOv_so7JMSlMvZQBl3LFO9us7RrdRwMnDq7McrqZv3ALrFgz3272TbuMbwjNUDIqCFQ
+2021-06-04 21:35:39.480  INFO 19160 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:35:39.480  INFO 19160 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:35:40.583  INFO 19160 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5Ijoia2RJNUp5c0NLcTBsRnBpdVV1VDlidz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMDkzN30.mKmAQTAbLpOIbH2PyusoOv_so7JMSlMvZQBl3LFO9us7RrdRwMnDq7McrqZv3ALrFgz3272TbuMbwjNUDIqCFQ
+2021-06-04 21:35:40.591  INFO 19160 --- [http-nio-8080-exec-6] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:35:40.592  INFO 19160 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:35:42.852  INFO 19160 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5Ijoia2RJNUp5c0NLcTBsRnBpdVV1VDlidz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMDkzN30.mKmAQTAbLpOIbH2PyusoOv_so7JMSlMvZQBl3LFO9us7RrdRwMnDq7McrqZv3ALrFgz3272TbuMbwjNUDIqCFQ
+2021-06-04 21:35:43.111  INFO 19160 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:35:43.111  INFO 19160 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:38:07.421  INFO 24440 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 24440 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:38:07.421  INFO 24440 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:38:08.037  INFO 24440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:38:08.041  INFO 24440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:38:08.064  INFO 24440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:38:08.285  INFO 24440 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b08f438' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:38:08.289  INFO 24440 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:38:08.449  INFO 24440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:38:08.457  INFO 24440 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:38:08.457  INFO 24440 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:38:08.528  INFO 24440 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:38:08.528  INFO 24440 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1060 ms
+2021-06-04 21:38:09.488  INFO 24440 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5763c63f-0352-4dc8-b29a-cf90a8400a0c
+
+2021-06-04 21:38:09.554  INFO 24440 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@122635ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@67e0ff3a, org.springframework.security.web.header.HeaderWriterFilter@66f5a02e, org.springframework.security.web.authentication.logout.LogoutFilter@1bedc703, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@4fd05028, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1f992a3a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fe595dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@740b6628, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ac519dc, org.springframework.security.web.session.SessionManagementFilter@17207f5b, org.springframework.security.web.access.ExceptionTranslationFilter@64bebd55, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d13960e]
+2021-06-04 21:38:09.601  INFO 24440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:38:09.609  INFO 24440 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 2.711 seconds (JVM running for 4.226)
+2021-06-04 21:38:17.858  INFO 24440 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 21:38:17.858  INFO 24440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 21:38:17.859  INFO 24440 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 21:38:17.876  INFO 24440 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:38:17.892  INFO 24440 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:38:18.103  INFO 24440 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 21:38:23.176  INFO 24440 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiK2VMU3Z3Vm5NK2o2azgrN0hLNWN6dz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTA5OX0.Q9dXijgEerhGkle2Cnyt-yHVTtK4JoNySXJFwnUYtyts76TJrd_0v3fQVCenUTNyHktOsCKW6RFl5B_udcJpCA
+2021-06-04 21:38:23.221  INFO 24440 --- [http-nio-8080-exec-3] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:38:23.221  INFO 24440 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:38:23.286 ERROR 24440 --- [http-nio-8080-exec-3] druid.sql.Statement                      : {conn-10005, pstmt-20001} execute error. select
+     
+    id, open_id, title, describe, type, infor_type, img_path, create_time
+   
+    from `goods_message`
+    order by `create_time`
+     
+     
+      desc
+     
+    limit 0, ?
+
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'describe, type, infor_type, img_path, create_time
+   
+    from `goods_message`
+ ' at line 3
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3461)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:626)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy77.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy86.selectGoodsMessageInTimeOrder(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy87.selectGoodsMessageInTimeOrder(Unknown Source)
+	at com.sysu.swzl.service.Impl.SearchServiceImpl.searchLatest(SearchServiceImpl.java:36)
+	at com.sysu.swzl.controller.SearchController.searchLatestInfoList(SearchController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.sysu.swzl.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-06-04 21:38:23.371 ERROR 24440 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/wxxcx] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'describe, type, infor_type, img_path, create_time
+   
+    from `goods_message`
+ ' at line 3
+### The error may exist in file [D:\开发岗\软件工程\大作业\swzl\target\classes\mybatis\mappers\GoodsMessageMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select           id, open_id, title, describe, type, infor_type, img_path, create_time         from `goods_message`     order by `create_time`                   desc           limit 0, ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'describe, type, infor_type, img_path, create_time
+   
+    from `goods_message`
+ ' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'describe, type, infor_type, img_path, create_time
+   
+    from `goods_message`
+ ' at line 3] with root cause
+
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'describe, type, infor_type, img_path, create_time
+   
+    from `goods_message`
+ ' at line 3
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3461)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:626)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy77.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy86.selectGoodsMessageInTimeOrder(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy87.selectGoodsMessageInTimeOrder(Unknown Source)
+	at com.sysu.swzl.service.Impl.SearchServiceImpl.searchLatest(SearchServiceImpl.java:36)
+	at com.sysu.swzl.controller.SearchController.searchLatestInfoList(SearchController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.sysu.swzl.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-06-04 21:38:23.405  INFO 24440 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:38:23.405  INFO 24440 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:39:18.682  INFO 20644 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 20644 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:39:18.686  INFO 20644 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:39:19.277  INFO 20644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:39:19.281  INFO 20644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:39:19.300  INFO 20644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:39:19.516  INFO 20644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@49a71302' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:39:19.520  INFO 20644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:39:19.680  INFO 20644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:39:19.688  INFO 20644 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:39:19.688  INFO 20644 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:39:19.756  INFO 20644 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:39:19.756  INFO 20644 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1023 ms
+2021-06-04 21:39:20.685  INFO 20644 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e9edd121-d7b9-4899-988a-12a3df0232c3
+
+2021-06-04 21:39:20.748  INFO 20644 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fde8f7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@64bebd55, org.springframework.security.web.header.HeaderWriterFilter@71e7adbb, org.springframework.security.web.authentication.logout.LogoutFilter@27fe059d, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@5961e92d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b73bd6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3730f716, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45843650, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11d86b9d, org.springframework.security.web.session.SessionManagementFilter@4451f60c, org.springframework.security.web.access.ExceptionTranslationFilter@629a9f26, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2574a9e3]
+2021-06-04 21:39:20.798  INFO 20644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:39:20.806  INFO 20644 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 2.599 seconds (JVM running for 4.11)
+2021-06-04 21:39:44.786  INFO 20644 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 21:39:44.787  INFO 20644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 21:39:44.787  INFO 20644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-06-04 21:39:44.800  INFO 20644 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:39:44.800  INFO 20644 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:39:45.012  INFO 20644 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 21:39:47.633  INFO 20644 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiK2VMU3Z3Vm5NK2o2azgrN0hLNWN6dz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTA5OX0.Q9dXijgEerhGkle2Cnyt-yHVTtK4JoNySXJFwnUYtyts76TJrd_0v3fQVCenUTNyHktOsCKW6RFl5B_udcJpCA
+2021-06-04 21:39:47.934  INFO 20644 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:39:47.934  INFO 20644 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:40:09.650  INFO 20644 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiK2VMU3Z3Vm5NK2o2azgrN0hLNWN6dz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTE4Nn0.JpajwAR3QFokMQlpos6DuO1e1UUMFXI1uhF4ClvMue6vfUnazT5Vr2Jjr9TYyKWkq4tr4xAt-DG6Ojo9vcnv6g
+2021-06-04 21:40:09.662  INFO 20644 --- [http-nio-8080-exec-6] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:40:09.662  INFO 20644 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:40:09.701 ERROR 20644 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/wxxcx] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.executor.ExecutorException: A query was run and no Result Maps were found for the Mapped Statement 'com.sysu.swzl.dao.GoodsMessageMapper.selectGoodsMessageInTimeOrder'.  It's likely that neither a Result Type nor a Result Map was specified.] with root cause
+
+org.apache.ibatis.executor.ExecutorException: A query was run and no Result Maps were found for the Mapped Statement 'com.sysu.swzl.dao.GoodsMessageMapper.selectGoodsMessageInTimeOrder'.  It's likely that neither a Result Type nor a Result Map was specified.
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.validateResultMapsCount(DefaultResultSetHandler.java:289)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:191)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy77.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy86.selectGoodsMessageInTimeOrder(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy87.selectGoodsMessageInTimeOrder(Unknown Source)
+	at com.sysu.swzl.service.Impl.SearchServiceImpl.searchLatest(SearchServiceImpl.java:36)
+	at com.sysu.swzl.controller.SearchController.searchLatestInfoList(SearchController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.sysu.swzl.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:97)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-06-04 21:40:48.303  INFO 17912 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 17912 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:40:48.307  INFO 17912 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:40:48.927  INFO 17912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:40:48.931  INFO 17912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:40:48.951  INFO 17912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:40:49.171  INFO 17912 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b08f438' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:40:49.175  INFO 17912 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:40:49.335  INFO 17912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:40:49.339  INFO 17912 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:40:49.339  INFO 17912 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:40:49.409  INFO 17912 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:40:49.409  INFO 17912 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1063 ms
+2021-06-04 21:40:50.353  INFO 17912 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 355e3c91-51cb-4d31-8cff-105944cc2dd6
+
+2021-06-04 21:40:50.424  INFO 17912 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a0e0886, org.springframework.security.web.context.SecurityContextPersistenceFilter@72443081, org.springframework.security.web.header.HeaderWriterFilter@6f6efa4f, org.springframework.security.web.authentication.logout.LogoutFilter@337a6d30, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@4fd05028, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@28279a49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6588b715, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b2bf745, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ad8717d, org.springframework.security.web.session.SessionManagementFilter@e3b0369, org.springframework.security.web.access.ExceptionTranslationFilter@1e3df614, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@800d065]
+2021-06-04 21:40:50.472  INFO 17912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:40:50.484  INFO 17912 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 2.647 seconds (JVM running for 4.126)
+2021-06-04 21:40:58.688  INFO 17912 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 21:40:58.689  INFO 17912 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 21:40:58.690  INFO 17912 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 21:40:58.700  INFO 17912 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiK2VMU3Z3Vm5NK2o2azgrN0hLNWN6dz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTE4Nn0.JpajwAR3QFokMQlpos6DuO1e1UUMFXI1uhF4ClvMue6vfUnazT5Vr2Jjr9TYyKWkq4tr4xAt-DG6Ojo9vcnv6g
+2021-06-04 21:40:59.526  INFO 17912 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:40:59.577  INFO 17912 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:40:59.761  INFO 17912 --- [http-nio-8080-exec-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 21:41:01.501  INFO 17912 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:41:01.501  INFO 17912 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:41:04.636  INFO 17912 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:41:04.643  INFO 17912 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:41:04.643  INFO 17912 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:41:04.686  INFO 17912 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:41:05.020  INFO 17912 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:41:05.024  INFO 17912 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:41:06.355  INFO 17912 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:41:06.358  INFO 17912 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:41:07.613  INFO 17912 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:41:07.622  INFO 17912 --- [http-nio-8080-exec-10] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:41:07.622  INFO 17912 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:41:31.586  INFO 17912 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:41:31.592  INFO 17912 --- [http-nio-8080-exec-3] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:41:31.593  INFO 17912 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:41:49.903  INFO 17912 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:41:49.912  INFO 17912 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:41:51.050  INFO 17912 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:41:51.061  INFO 17912 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:41:51.061  INFO 17912 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:42:20.533  INFO 17912 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:42:20.536  INFO 17912 --- [http-nio-8080-exec-2] com.sysu.swzl.controller.PushController  : uploadImg token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:42:20.544  INFO 17912 --- [http-nio-8080-exec-2] c.s.swzl.service.Impl.FileServiceImpl    : upload url:D:\开发岗\软件工程\大作业\swzl\image\upload
+2021-06-04 21:42:20.544  INFO 17912 --- [http-nio-8080-exec-2] c.s.swzl.service.Impl.FileServiceImpl    : final filename: 694c0f25-5aed-4eaf-a832-9611c09d47abP052cKCOUqK28093bda4e7dbab967448a0597c35d55c.jpg
+2021-06-04 21:42:20.544  INFO 17912 --- [http-nio-8080-exec-2] c.s.swzl.service.Impl.FileServiceImpl    : file path: image\upload\694c0f25-5aed-4eaf-a832-9611c09d47abP052cKCOUqK28093bda4e7dbab967448a0597c35d55c.jpg
+2021-06-04 21:42:20.745  INFO 17912 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:42:22.488  INFO 17912 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:42:22.495  INFO 17912 --- [http-nio-8080-exec-7] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:42:22.495  INFO 17912 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:42:27.264  INFO 17912 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:42:27.271  INFO 17912 --- [http-nio-8080-exec-9] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:42:27.272  INFO 17912 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:42:27.300  INFO 17912 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:42:27.313  INFO 17912 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:43:19.256  INFO 17912 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:43:19.262  INFO 17912 --- [http-nio-8080-exec-3] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:43:19.262  INFO 17912 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:43:24.948  INFO 17912 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:43:24.956  INFO 17912 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:43:24.956  INFO 17912 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:43:27.421  INFO 17912 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:43:27.427  INFO 17912 --- [http-nio-8080-exec-4] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:43:27.428  INFO 17912 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:43:32.198  INFO 17912 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:43:32.203  INFO 17912 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:43:32.203  INFO 17912 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:47:27.052  INFO 26212 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 26212 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:47:27.061  INFO 26212 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:47:27.709  INFO 26212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:47:27.713  INFO 26212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:47:27.733  INFO 26212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:47:27.963  INFO 26212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b08f438' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:47:27.963  INFO 26212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:47:28.165  INFO 26212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:47:28.172  INFO 26212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:47:28.172  INFO 26212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:47:28.246  INFO 26212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:47:28.246  INFO 26212 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1140 ms
+2021-06-04 21:47:29.436  INFO 26212 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0ecc8dd9-b6e5-41d1-99f5-9c7ee4d5f9ac
+
+2021-06-04 21:47:29.524  INFO 26212 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ad8717d, org.springframework.security.web.context.SecurityContextPersistenceFilter@e3b0369, org.springframework.security.web.header.HeaderWriterFilter@fd413fb, org.springframework.security.web.authentication.logout.LogoutFilter@2921a36a, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@4fd05028, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@384fda47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72443081, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@373052b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4293e066, org.springframework.security.web.session.SessionManagementFilter@4e3f2908, org.springframework.security.web.access.ExceptionTranslationFilter@286855ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@691124ee]
+2021-06-04 21:47:29.583  INFO 26212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:47:29.588  INFO 26212 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 3.025 seconds (JVM running for 4.434)
+2021-06-04 21:47:41.431  INFO 26212 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 21:47:41.431  INFO 26212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 21:47:41.435  INFO 26212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-06-04 21:47:41.446  INFO 26212 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:47:44.211  INFO 26212 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:47:44.211  INFO 26212 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:47:44.374  INFO 26212 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 21:48:36.456  INFO 20276 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 20276 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:48:36.460  INFO 20276 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:48:37.171  INFO 20276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:48:37.175  INFO 20276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:48:37.201  INFO 20276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:48:37.444  INFO 20276 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@59429fac' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:48:37.448  INFO 20276 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:48:37.620  INFO 20276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:48:37.624  INFO 20276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:48:37.624  INFO 20276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:48:37.694  INFO 20276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:48:37.694  INFO 20276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1195 ms
+2021-06-04 21:48:38.644  INFO 20276 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cf74522d-ee57-4ed9-bf53-bba5a58cd0e9
+
+2021-06-04 21:48:38.715  INFO 20276 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dc40ab9, org.springframework.security.web.context.SecurityContextPersistenceFilter@750ed637, org.springframework.security.web.header.HeaderWriterFilter@766a52f5, org.springframework.security.web.authentication.logout.LogoutFilter@f171912, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@1c9fbb61, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4351ed61, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@673e76b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@384fda47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2db6d68d, org.springframework.security.web.session.SessionManagementFilter@2b73bd6b, org.springframework.security.web.access.ExceptionTranslationFilter@5d318e91, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@33f2cfda]
+2021-06-04 21:48:38.763  INFO 20276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:48:38.771  INFO 20276 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 2.809 seconds (JVM running for 4.366)
+2021-06-04 21:48:49.792  INFO 20276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 21:48:49.793  INFO 20276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 21:48:49.794  INFO 20276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 21:48:49.815  INFO 20276 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:48:52.544  INFO 20276 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:48:52.544  INFO 20276 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:48:52.714  INFO 20276 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 21:50:17.865  INFO 2124 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 2124 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:50:17.865  INFO 2124 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:50:18.482  INFO 2124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:50:18.482  INFO 2124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:50:18.501  INFO 2124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:50:18.732  INFO 2124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b08f438' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:50:18.732  INFO 2124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:50:18.915  INFO 2124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:50:18.923  INFO 2124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:50:18.923  INFO 2124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:50:19.017  INFO 2124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:50:19.017  INFO 2124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
+2021-06-04 21:50:20.038  INFO 2124 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ac53053d-068a-4b4f-be5b-a643b124c582
+
+2021-06-04 21:50:20.120  INFO 2124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4125ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@27fe059d, org.springframework.security.web.header.HeaderWriterFilter@52c9d3d0, org.springframework.security.web.authentication.logout.LogoutFilter@566e142, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@4fd05028, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b08772d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4342c13, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a7b2e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78da899f, org.springframework.security.web.session.SessionManagementFilter@298b64f7, org.springframework.security.web.access.ExceptionTranslationFilter@72443081, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cc79c02]
+2021-06-04 21:50:20.233  INFO 2124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:50:20.243  INFO 2124 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 2.851 seconds (JVM running for 4.356)
+2021-06-04 21:50:40.065  INFO 12260 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 12260 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 21:50:40.069  INFO 12260 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 21:50:40.755  INFO 12260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 21:50:40.755  INFO 12260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 21:50:40.775  INFO 12260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-06-04 21:50:41.010  INFO 12260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6b474074' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:50:41.014  INFO 12260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 21:50:41.174  INFO 12260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 21:50:41.178  INFO 12260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 21:50:41.178  INFO 12260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 21:50:41.250  INFO 12260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 21:50:41.250  INFO 12260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1118 ms
+2021-06-04 21:50:42.186  INFO 12260 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 86d519a4-65cf-434a-940d-b2cde1e84103
+
+2021-06-04 21:50:42.254  INFO 12260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e7b265e, org.springframework.security.web.context.SecurityContextPersistenceFilter@4342c13, org.springframework.security.web.header.HeaderWriterFilter@373052b5, org.springframework.security.web.authentication.logout.LogoutFilter@1f992a3a, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@4fb392c4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@f171912, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c241a9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2921a36a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51da32e5, org.springframework.security.web.session.SessionManagementFilter@27fe059d, org.springframework.security.web.access.ExceptionTranslationFilter@6588b715, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@262a1fad]
+2021-06-04 21:50:42.309  INFO 12260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 21:50:42.317  INFO 12260 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 2.739 seconds (JVM running for 4.18)
+2021-06-04 21:51:02.749  INFO 12260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 21:51:02.749  INFO 12260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 21:51:02.750  INFO 12260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 21:51:02.764  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:51:05.518  INFO 12260 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:51:05.518  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:51:05.681  INFO 12260 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 21:51:20.252  INFO 12260 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:51:20.263  INFO 12260 --- [http-nio-8080-exec-2] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:51:20.263  INFO 12260 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:51:20.324  INFO 12260 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:51:20.325  INFO 12260 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:51:21.977  INFO 12260 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:51:21.999  INFO 12260 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:51:23.394  INFO 12260 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:51:23.403  INFO 12260 --- [http-nio-8080-exec-7] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:51:23.403  INFO 12260 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:51:28.931  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:51:28.951  INFO 12260 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:51:32.242  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:51:32.249  INFO 12260 --- [http-nio-8080-exec-10] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:51:32.249  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:51:40.132  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiZU4rQTlDNllaN0s1b09MeHFTSVhqZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMTI2MH0.jz8U2yksuTbclKFdwJ3dmobbxPCaLeovTgTY9-fYGEbEbWK5pkqZscB5yxgH6iEvWeLzBpGd1Asj-dgXbNzlhw
+2021-06-04 21:51:40.140  INFO 12260 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:51:40.140  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:55:06.285  INFO 12260 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:55:06.597  INFO 12260 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:55:38.826  INFO 12260 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:55:39.083  INFO 12260 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:58:51.711  INFO 12260 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:58:58.709  INFO 12260 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:58:59.075  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:59:04.335  INFO 12260 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiVndOMjFnUUI3Q0gvd1R5aUpQSDNXQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjMzOX0.fupp2kJJ4lhaqL75ganP4YUHaxh9UlpKXSSetUusDFlXUphP_1KkXpF6FabrEQfeUsK4CmvdwwyrsbGRgkeEbA
+2021-06-04 21:59:04.348  INFO 12260 --- [http-nio-8080-exec-9] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:59:04.348  INFO 12260 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 21:59:20.879  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:59:21.025  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:59:38.542  INFO 12260 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:59:38.670  INFO 12260 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 21:59:44.557  INFO 12260 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiL09ZcFpLVmxqcC9yUXRlS1l6d1ByZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjM3OH0.xVw2gplY_NR-g0GZrIWg10x451Q-IsOiO84gBf4XVS2CqLV3H4sLPSvocPXS42PzMORQ0xRi53AUoP_9CPkMMg
+2021-06-04 21:59:44.567  INFO 12260 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 21:59:44.567  INFO 12260 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:00:23.501  INFO 12260 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: 
+2021-06-04 22:00:24.796  INFO 12260 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:00:25.464  INFO 12260 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:00:28.684  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjQyNn0.V4LOL9Y4LZB6ExZyCjM5GpnmwoaqWa_hDXQ9RpKEzZoiotxDACLwe5m6Xrzo31ra6JY4oDzxPqESP2_MRCrXjw
+2021-06-04 22:00:28.694  INFO 12260 --- [http-nio-8080-exec-8] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:00:28.694  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:00:30.488  INFO 12260 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:00:30.562  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjQyNn0.V4LOL9Y4LZB6ExZyCjM5GpnmwoaqWa_hDXQ9RpKEzZoiotxDACLwe5m6Xrzo31ra6JY4oDzxPqESP2_MRCrXjw
+2021-06-04 22:00:30.570  INFO 12260 --- [http-nio-8080-exec-10] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:00:30.570  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:00:37.839  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjQyNn0.V4LOL9Y4LZB6ExZyCjM5GpnmwoaqWa_hDXQ9RpKEzZoiotxDACLwe5m6Xrzo31ra6JY4oDzxPqESP2_MRCrXjw
+2021-06-04 22:00:37.845  INFO 12260 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:00:37.845  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:02:06.045  INFO 12260 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:02:06.242  INFO 12260 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:02:09.425  INFO 12260 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:02:09.512  INFO 12260 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjUyN30.S2k_B-qHlPFbBtYO-w2bt_Q4n7brOPeY4Q_k1YN5PIUKbX0hzvnrj8IjpyxhzKQiZSEBJhlybnQU-2ccM695zA
+2021-06-04 22:02:09.521  INFO 12260 --- [http-nio-8080-exec-3] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:02:09.521  INFO 12260 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:02:28.006  INFO 12260 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjUyN30.S2k_B-qHlPFbBtYO-w2bt_Q4n7brOPeY4Q_k1YN5PIUKbX0hzvnrj8IjpyxhzKQiZSEBJhlybnQU-2ccM695zA
+2021-06-04 22:02:28.011  INFO 12260 --- [http-nio-8080-exec-6] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:02:28.011  INFO 12260 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:03:09.149  INFO 12260 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjUyN30.S2k_B-qHlPFbBtYO-w2bt_Q4n7brOPeY4Q_k1YN5PIUKbX0hzvnrj8IjpyxhzKQiZSEBJhlybnQU-2ccM695zA
+2021-06-04 22:03:09.155  INFO 12260 --- [http-nio-8080-exec-7] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:03:09.155  INFO 12260 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:03:35.867  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjUyN30.S2k_B-qHlPFbBtYO-w2bt_Q4n7brOPeY4Q_k1YN5PIUKbX0hzvnrj8IjpyxhzKQiZSEBJhlybnQU-2ccM695zA
+2021-06-04 22:03:35.874  INFO 12260 --- [http-nio-8080-exec-8] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:03:35.875  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:03:48.366  INFO 12260 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjUyN30.S2k_B-qHlPFbBtYO-w2bt_Q4n7brOPeY4Q_k1YN5PIUKbX0hzvnrj8IjpyxhzKQiZSEBJhlybnQU-2ccM695zA
+2021-06-04 22:03:48.371  INFO 12260 --- [http-nio-8080-exec-9] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:03:48.371  INFO 12260 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:04:13.373  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjUyN30.S2k_B-qHlPFbBtYO-w2bt_Q4n7brOPeY4Q_k1YN5PIUKbX0hzvnrj8IjpyxhzKQiZSEBJhlybnQU-2ccM695zA
+2021-06-04 22:04:13.379  INFO 12260 --- [http-nio-8080-exec-10] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:04:13.379  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:04:14.269  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjUyN30.S2k_B-qHlPFbBtYO-w2bt_Q4n7brOPeY4Q_k1YN5PIUKbX0hzvnrj8IjpyxhzKQiZSEBJhlybnQU-2ccM695zA
+2021-06-04 22:04:14.274  INFO 12260 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:04:14.274  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:04:56.984  INFO 12260 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:04:57.006  INFO 12260 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:04:58.157  INFO 12260 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiYVlrL1RlOWVWeVg3cEZ3aTVSY3BiQT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjUyN30.S2k_B-qHlPFbBtYO-w2bt_Q4n7brOPeY4Q_k1YN5PIUKbX0hzvnrj8IjpyxhzKQiZSEBJhlybnQU-2ccM695zA
+2021-06-04 22:04:58.163  INFO 12260 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:04:58.163  INFO 12260 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:05:29.084  INFO 12260 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:05:30.201  INFO 12260 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:05:30.204  INFO 12260 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:05:30.288  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiMTNlNlNzVXVjcm0va1pnZmtydGRkUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjcyOX0.2jZcHmgsLEafp4ybcYaSL3CCcnNu6b90SablP8lLPqNrACQc-Pb7tAIayev0rhRU1AhGPrK6aEJ97bFIOYoJzQ
+2021-06-04 22:05:30.295  INFO 12260 --- [http-nio-8080-exec-8] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:05:30.295  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:05:30.346  INFO 12260 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:05:30.346  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:05:50.608  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiMTNlNlNzVXVjcm0va1pnZmtydGRkUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjcyOX0.2jZcHmgsLEafp4ybcYaSL3CCcnNu6b90SablP8lLPqNrACQc-Pb7tAIayev0rhRU1AhGPrK6aEJ97bFIOYoJzQ
+2021-06-04 22:05:50.614  INFO 12260 --- [http-nio-8080-exec-1] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:05:50.614  INFO 12260 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:06:24.990  INFO 12260 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiMTNlNlNzVXVjcm0va1pnZmtydGRkUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjcyOX0.2jZcHmgsLEafp4ybcYaSL3CCcnNu6b90SablP8lLPqNrACQc-Pb7tAIayev0rhRU1AhGPrK6aEJ97bFIOYoJzQ
+2021-06-04 22:06:24.995  INFO 12260 --- [http-nio-8080-exec-2] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:06:24.995  INFO 12260 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:07:16.176  INFO 12260 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiMTNlNlNzVXVjcm0va1pnZmtydGRkUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjcyOX0.2jZcHmgsLEafp4ybcYaSL3CCcnNu6b90SablP8lLPqNrACQc-Pb7tAIayev0rhRU1AhGPrK6aEJ97bFIOYoJzQ
+2021-06-04 22:07:16.180  INFO 12260 --- [http-nio-8080-exec-4] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:07:16.180  INFO 12260 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:10:03.292  INFO 12260 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiMTNlNlNzVXVjcm0va1pnZmtydGRkUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMjcyOX0.2jZcHmgsLEafp4ybcYaSL3CCcnNu6b90SablP8lLPqNrACQc-Pb7tAIayev0rhRU1AhGPrK6aEJ97bFIOYoJzQ
+2021-06-04 22:10:03.357  INFO 12260 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:10:03.626  INFO 12260 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:10:27.449  INFO 12260 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiL1Z2MUpxL0ZvVGdPZVNjbk5keTI1UT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzAwNn0.qkbjpTxhaErkqAMguuDktPfM3wIx2dgrdsMiE-nWUi1lpl3F4KpH8CT90IQ7F0iXLFpqq77FsA7XaPtX0NIqXg
+2021-06-04 22:10:27.509  INFO 12260 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:10:27.828  INFO 12260 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:11:48.276  INFO 18924 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 18924 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 22:11:48.280  INFO 18924 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 22:11:49.377  INFO 18924 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 22:11:49.377  INFO 18924 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 22:11:49.396  INFO 18924 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2021-06-04 22:11:49.638  INFO 18924 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@48b22fd4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 22:11:49.638  INFO 18924 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 22:11:50.025  INFO 18924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 22:11:50.033  INFO 18924 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 22:11:50.037  INFO 18924 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 22:11:50.130  INFO 18924 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 22:11:50.130  INFO 18924 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1811 ms
+2021-06-04 22:11:51.295  INFO 18924 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f916adb6-b6a2-4bd0-b138-0188de8d24bb
+
+2021-06-04 22:11:51.365  INFO 18924 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dce59e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3730f716, org.springframework.security.web.header.HeaderWriterFilter@7c40ffef, org.springframework.security.web.authentication.logout.LogoutFilter@4342c13, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@36327cec, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@750ed637, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66f5a02e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33feda48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11381415, org.springframework.security.web.session.SessionManagementFilter@64bebd55, org.springframework.security.web.access.ExceptionTranslationFilter@4391a2d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@422ab737]
+2021-06-04 22:11:51.430  INFO 18924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 22:11:51.438  INFO 18924 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 3.709 seconds (JVM running for 5.463)
+2021-06-04 22:11:59.436  INFO 18924 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 22:11:59.437  INFO 18924 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 22:11:59.438  INFO 18924 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 22:11:59.454  INFO 18924 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:11:59.454  INFO 18924 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiL1Z2MUpxL0ZvVGdPZVNjbk5keTI1UT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzAyOH0.DlDuZtZBQrWJRADR1X_8WvVB0auoRe6QJ6G28578MPHoQwleAqmVqWOqsTGDOWR4v7OLQFH6EmhZfDUWvTBIww
+2021-06-04 22:11:59.527  INFO 18924 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:11:59.862  INFO 18924 --- [http-nio-8080-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 22:13:29.625  INFO 18924 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:13:29.702  INFO 18924 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiL1Z2MUpxL0ZvVGdPZVNjbk5keTI1UT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzEyMX0.z-nt2UmmdhzcD6EKecrKcomSBlOFSgGKqeUEwR6ZskTpK87htjdYlPri-MULb6GHfpMp6A78HSwPcghxilg3tQ
+2021-06-04 22:13:29.889  INFO 18924 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:14:55.472  INFO 9740 --- [main] com.sysu.swzl.SwzlApplication            : Starting SwzlApplication using Java 1.8.0_221 on LAPTOP-TKK008OJ with PID 9740 (D:\开发岗\软件工程\大作业\swzl\target\classes started by 49367 in D:\开发岗\软件工程\大作业\swzl)
+2021-06-04 22:14:55.472  INFO 9740 --- [main] com.sysu.swzl.SwzlApplication            : The following profiles are active: dev
+2021-06-04 22:14:56.079  INFO 9740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-04 22:14:56.079  INFO 9740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-04 22:14:56.098  INFO 9740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-06-04 22:14:56.329  INFO 9740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b08f438' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 22:14:56.329  INFO 9740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 22:14:56.508  INFO 9740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-04 22:14:56.513  INFO 9740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 22:14:56.513  INFO 9740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-04 22:14:56.591  INFO 9740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring embedded WebApplicationContext
+2021-06-04 22:14:56.591  INFO 9740 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1084 ms
+2021-06-04 22:14:57.683  INFO 9740 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b1869436-1e45-4459-a56f-c895a462c549
+
+2021-06-04 22:14:57.747  INFO 9740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b4125ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@27fe059d, org.springframework.security.web.header.HeaderWriterFilter@52c9d3d0, org.springframework.security.web.authentication.logout.LogoutFilter@566e142, com.sysu.swzl.filter.JwtAuthenticationTokenFilter@4fd05028, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b08772d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4342c13, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a7b2e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78da899f, org.springframework.security.web.session.SessionManagementFilter@298b64f7, org.springframework.security.web.access.ExceptionTranslationFilter@7c1a8f0f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cc79c02]
+2021-06-04 22:14:57.802  INFO 9740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/wxxcx'
+2021-06-04 22:14:57.809  INFO 9740 --- [main] com.sysu.swzl.SwzlApplication            : Started SwzlApplication in 2.824 seconds (JVM running for 4.368)
+2021-06-04 22:15:09.409  INFO 9740 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/wxxcx]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 22:15:09.409  INFO 9740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 22:15:09.411  INFO 9740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-06-04 22:15:09.436  INFO 9740 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:15:09.436  INFO 9740 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:15:09.441  INFO 9740 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5Ijoiei9WemJhTklmNmZHS1ZLR2lpQm9JZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzIxMH0.dFedP-WOs_kSZqGehII8EM2-xT04E8aFPF7shzSInCefnyt6hNtxn0jMK0UGzqhbhyooyYM_cAMDD72NkwDWmw
+2021-06-04 22:15:09.666  INFO 9740 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:15:09.674  INFO 9740 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:15:09.913  INFO 9740 --- [http-nio-8080-exec-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-04 22:15:12.366  INFO 9740 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token缺失
+2021-06-04 22:16:34.669  INFO 9740 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:16:34.669  INFO 9740 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:16:34.805  INFO 9740 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5Ijoiei9WemJhTklmNmZHS1ZLR2lpQm9JZz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzMxMX0.ZIGIWCL28jQjG-vIiZuMMcrxW96u_8kFl0pISOOu-O9SI-FeugVUjAgQNRl4pmmEKxFbL3BPobKMUVdqReP_Vg
+2021-06-04 22:16:34.812  INFO 9740 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token缺失
+2021-06-04 22:16:36.861  INFO 9740 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:16:36.861  INFO 9740 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:18:01.008  INFO 9740 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:18:01.008  INFO 9740 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:18:01.009  INFO 9740 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:18:01.009  INFO 9740 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:18:01.127  INFO 9740 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiTlo5SXRoT3ovVndvOGNzMXdXUE9PUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzM5N30.QVQmvp4k_Y002i6DRacgpE984do7Qp0qyrLn3TBRw6y7mWctUZ-LU_a8pslikqdyCmZCX5VlTi3yKbh4TYU2bA
+2021-06-04 22:18:01.148  INFO 9740 --- [http-nio-8080-exec-9] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:18:01.148  INFO 9740 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:18:01.236  INFO 9740 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:18:01.236  INFO 9740 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:18:01.236  INFO 9740 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:18:01.236  INFO 9740 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:18:11.398  INFO 9740 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiTlo5SXRoT3ovVndvOGNzMXdXUE9PUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzM5N30.QVQmvp4k_Y002i6DRacgpE984do7Qp0qyrLn3TBRw6y7mWctUZ-LU_a8pslikqdyCmZCX5VlTi3yKbh4TYU2bA
+2021-06-04 22:18:11.406  INFO 9740 --- [http-nio-8080-exec-2] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:18:11.406  INFO 9740 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:18:14.445  INFO 9740 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiTlo5SXRoT3ovVndvOGNzMXdXUE9PUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzM5N30.QVQmvp4k_Y002i6DRacgpE984do7Qp0qyrLn3TBRw6y7mWctUZ-LU_a8pslikqdyCmZCX5VlTi3yKbh4TYU2bA
+2021-06-04 22:18:14.455  INFO 9740 --- [http-nio-8080-exec-4] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:18:14.455  INFO 9740 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:18:30.244  INFO 9740 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiTlo5SXRoT3ovVndvOGNzMXdXUE9PUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzM5N30.QVQmvp4k_Y002i6DRacgpE984do7Qp0qyrLn3TBRw6y7mWctUZ-LU_a8pslikqdyCmZCX5VlTi3yKbh4TYU2bA
+2021-06-04 22:18:30.250  INFO 9740 --- [http-nio-8080-exec-3] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:18:30.250  INFO 9740 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:18:35.250  INFO 9740 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiTlo5SXRoT3ovVndvOGNzMXdXUE9PUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzM5N30.QVQmvp4k_Y002i6DRacgpE984do7Qp0qyrLn3TBRw6y7mWctUZ-LU_a8pslikqdyCmZCX5VlTi3yKbh4TYU2bA
+2021-06-04 22:18:35.256  INFO 9740 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:18:35.256  INFO 9740 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:18:39.088  INFO 9740 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:18:39.089  INFO 9740 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:18:39.107  INFO 9740 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:18:39.108  INFO 9740 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:18:40.144  INFO 9740 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiTlo5SXRoT3ovVndvOGNzMXdXUE9PUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzM5N30.QVQmvp4k_Y002i6DRacgpE984do7Qp0qyrLn3TBRw6y7mWctUZ-LU_a8pslikqdyCmZCX5VlTi3yKbh4TYU2bA
+2021-06-04 22:18:40.151  INFO 9740 --- [http-nio-8080-exec-7] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:18:40.151  INFO 9740 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:19:00.531  INFO 9740 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiTlo5SXRoT3ovVndvOGNzMXdXUE9PUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzM5N30.QVQmvp4k_Y002i6DRacgpE984do7Qp0qyrLn3TBRw6y7mWctUZ-LU_a8pslikqdyCmZCX5VlTi3yKbh4TYU2bA
+2021-06-04 22:19:00.538  INFO 9740 --- [http-nio-8080-exec-9] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:19:00.538  INFO 9740 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:20:07.876  INFO 9740 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:20:07.876  INFO 9740 --- [http-nio-8080-exec-1] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:20:07.973  INFO 9740 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiTlo5SXRoT3ovVndvOGNzMXdXUE9PUT09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzM5N30.QVQmvp4k_Y002i6DRacgpE984do7Qp0qyrLn3TBRw6y7mWctUZ-LU_a8pslikqdyCmZCX5VlTi3yKbh4TYU2bA
+2021-06-04 22:20:07.979  INFO 9740 --- [http-nio-8080-exec-10] c.s.s.f.JwtAuthenticationTokenFilter     : token缺失
+2021-06-04 22:20:08.201  INFO 9740 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:20:08.201  INFO 9740 --- [http-nio-8080-exec-2] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:20:17.565  INFO 9740 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:20:17.565  INFO 9740 --- [http-nio-8080-exec-4] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:20:17.567  INFO 9740 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:20:17.567  INFO 9740 --- [http-nio-8080-exec-3] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:20:17.666  INFO 9740 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : token: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzZXNzaW9uS2V5IjoiQVVYeXpLT2l4L2s5ZlRjSXljV0pldz09Iiwib3BlbklkIjoib0xfTFg2ZThRYnY4MjZ1Q1BZalFLYTByMWtyYyIsImV4cCI6MTYyMjgyMzYwOX0.r4BRrB7dANOlurBrXDhV12bi40Drygnocs7K0YhHGL99viEwQwcofQL43HZX1Onqf9A7cIxt6R5RhzrDhBYnnQ
+2021-06-04 22:20:17.673  INFO 9740 --- [http-nio-8080-exec-5] c.s.swzl.service.Impl.WeChatServiceImpl  : [common, admin]
+2021-06-04 22:20:17.673  INFO 9740 --- [http-nio-8080-exec-5] c.s.s.f.JwtAuthenticationTokenFilter     : openid: oL_LX6e8Qbv826uCPYjQKa0r1krc Authorities: [common, admin]
+2021-06-04 22:20:17.738  INFO 9740 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:20:17.738  INFO 9740 --- [http-nio-8080-exec-6] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:20:17.738  INFO 9740 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:20:17.738  INFO 9740 --- [http-nio-8080-exec-8] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:21:58.454  INFO 9740 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:21:58.454  INFO 9740 --- [http-nio-8080-exec-7] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:21:58.716  INFO 9740 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token: null
+2021-06-04 22:21:58.716  INFO 9740 --- [http-nio-8080-exec-9] c.s.s.f.JwtAuthenticationTokenFilter     : token格式不正确
+2021-06-04 22:22:35.845  INFO 9740 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /192.168.143.130:6379
+2021-06-04 22:22:38.096  WARN 9740 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [192.168.143.130:6379]: Connection refused: no further information: /192.168.143.130:6379
+2021-06-04 22:22:42.420  INFO 9740 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 192.168.143.130:6379
+2021-06-04 22:22:44.431  WARN 9740 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [192.168.143.130:6379]: Connection refused: no further information: /192.168.143.130:6379

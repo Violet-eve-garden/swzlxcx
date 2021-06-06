@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -69,8 +70,12 @@ public class JwtUtil {
      */
     public boolean weChatVerifyToken(String token) {
         try {
+            if (!StringUtils.hasText(token))
+                return false;
             // parse the token.
             Map<String, Object> claims = getClaimsMapFromToken(token);
+            if (claims == null)
+                return false;
             String openid = (String) claims.get("openId");
             String key = WeChatConstant.WxJwtConstant.WX_TOKEN_CACHE_PREFIX + token;
             String openidInRedis = (String) redisTemplate.opsForHash().get(key, WeChatConstant.WxJwtConstant.VERIFY_KEY);

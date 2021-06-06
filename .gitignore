@@ -4,9 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-/image/
-/logs/
-/src/main/resources/application-private.yml
+image/
+logs/
+src/main/resources/application-private.yml
 
 ### STS ###
 .apt_generated

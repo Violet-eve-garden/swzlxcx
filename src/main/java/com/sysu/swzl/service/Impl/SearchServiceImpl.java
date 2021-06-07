@@ -47,6 +47,10 @@ public class SearchServiceImpl implements SearchService {
     private StringRedisTemplate redisTemplate;
 
 
+    /**
+     * 查询最新的失物招领信息
+     * @return
+     */
     @Override
     public List<GoodsMessageRespVo> searchLatest() {
         ValueOperations<String, String> ops = redisTemplate.opsForValue();
@@ -58,24 +62,29 @@ public class SearchServiceImpl implements SearchService {
             List<GoodsMessage> goodsMessages = JSON.parseObject(data, new TypeReference<List<GoodsMessage>>(){});
             return GoodsMessageRespVo.copyFromGoodMessagesList(goodsMessages);
         }
-        // 没有则到数据库中查询，并保存到缓存中, 并发情况下只需要一个线程保存即可
-        List<GoodsMessage> goodsMessages = goodsMessageMapper.selectGoodsMessageInTimeOrder(10, false);
         // 双重检查锁
         synchronized (this){
             // 如果拿到锁的时候缓存中已有数据，则直接返回即可
             data = ops.get(MessageConstant.LATEST_INFO_REDIS_KEY);
             if (StringUtils.hasText(data)){
                 log.info("返回缓存中的数据");
+                List<GoodsMessage> goodsMessages = JSON.parseObject(data, new TypeReference<List<GoodsMessage>>(){});
                 return GoodsMessageRespVo.copyFromGoodMessagesList(goodsMessages);
             }
-            // 否则保存数据
+            // 没有则到数据库中查询，并保存到缓存中, 并发情况下只需要一个线程查询并保存即可
+            List<GoodsMessage> goodsMessages = goodsMessageMapper.selectGoodsMessageInTimeOrder(10, false);
             ops.set(MessageConstant.LATEST_INFO_REDIS_KEY, JSON.toJSONString(goodsMessages), MessageConstant.LATEST_INFO_REDIS_EX, TimeUnit.SECONDS);
-        }
 
-        log.info("返回数据库中的数据");
-        return GoodsMessageRespVo.copyFromGoodMessagesList(goodsMessages);
+            log.info("返回数据库中的数据");
+            return GoodsMessageRespVo.copyFromGoodMessagesList(goodsMessages);
+        }
     }
 
+    /**
+     * 根据id查询对应的失物的详细信息
+     * @param id
+     * @return
+     */
     @Override
     public GoodsSpecificInfoRespVo searchGoodsSpecificInfoById(Long id) {
         GoodsMessage goodsMessage = goodsMessageMapper.selectByPrimaryKey(id);
@@ -84,6 +93,11 @@ public class SearchServiceImpl implements SearchService {
         return new GoodsSpecificInfoRespVo(goodsMessage, wxUserInfo);
     }
 
+    /**
+     * 查询分类对应的失物信息列表
+     * @param type
+     * @return
+     */
     @Override
     public List<GoodsMessageRespVo> searchGoodsMessageListByType(String type) {
         List<GoodsMessage> goodsMessages = goodsMessageMapper.selectByType(type);

@@ -3,29 +3,23 @@ package com.sysu.swzl.controller;
 import com.sysu.swzl.common.R;
 import com.sysu.swzl.constant.FileConstant;
 import com.sysu.swzl.exception.BizCodeException;
-import com.sysu.swzl.pojo.CardsMessage;
 import com.sysu.swzl.pojo.GoodsMessage;
 import com.sysu.swzl.service.CardsMessageService;
 import com.sysu.swzl.service.FileService;
 import com.sysu.swzl.service.GoodsMessageService;
 import com.sysu.swzl.utils.JwtUtil;
-import com.sysu.swzl.validate.AddGroup;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import javax.jnlp.FileSaveService;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.concurrent.ExecutionException;
 
 /**
  * 上传信息的controller

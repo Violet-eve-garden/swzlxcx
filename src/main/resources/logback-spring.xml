@@ -4,7 +4,7 @@
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />
     <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
     <property name="log-dev.path" value="D:/开发岗/软件工程/大作业/swzl/logs/dev"/>
-    <property name="log-pro.path" value="D:/开发岗/软件工程/大作业/swzl/logs/prod"/>
+    <property name="log-pro.path" value="/usr/local/mydata/swzl/logs/prod"/>
 
     <!--重写了Spring Boot框架 org/springframework/boot/logging/logback/file-appender.xml 配置-->
     <!-- dev环境下的日志文件输出 -->
@@ -13,7 +13,7 @@
         <encoder>
             <pattern>${FILE_LOG_PATTERN}</pattern>
         </encoder>
-        <file>${log-dev.path}/blog-dev.log</file>
+        <file>${log-dev.path}/swzl-dev.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log-dev.path}/swzl-dev-%d{yyyy-MM-dd}.%i</fileNamePattern>
             <!--保留历史日志一个月的时间-->
@@ -32,7 +32,7 @@
         <encoder>
             <pattern>${FILE_LOG_PATTERN}</pattern>
         </encoder>
-        <file>${log-pro.path}/blog-pro.log</file>
+        <file>${log-pro.path}/swzl-pro.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log-pro.path}/swzl-pro-%d{yyyy-MM-dd}.%i</fileNamePattern>
             <!--保留历史日志一个月的时间-->
@@ -53,7 +53,7 @@
         </root>
     </springProfile>
 
-    <springProfile name="pro">
+    <springProfile name="prod">
         <root leval="WARN">
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="PRO_TIME_FILE" />

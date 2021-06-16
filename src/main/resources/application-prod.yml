@@ -5,7 +5,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/swzl?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
     username: root
-    password: root
+    password: heheda123456
     type: com.alibaba.druid.pool.DruidDataSource
 
     #   数据源其他配置
@@ -39,30 +39,33 @@ spring:
         login-username: 'violet-eve-garden'
         login-password: 'Zxzuishuaiaaa049'
         reset-enable: false
+
   redis:
-    host: 192.168.143.130
+    host: localhost
     port: 6379
-    database: 1
-server:
-  port: 8080
-  servlet:
-    context-path: /wxxcx
+    database: 0
+    username: default
+    password: heheda123456
+
 
 logging:
   level:
-    root: info
-    com.sysu.swzl.controller: debug
+    root: warn
+    com.sysu.swzl.controller: info
   file:
-    path: D:/开发岗/软件工程/大作业/swzl/logs/dev
-    name: swzl-dev.log
-
-file:
-  upload_path: files/upload
+    path: /usr/local/mydata/swzl/logs/prod
+    name: swzl-prod.log
 
 jackson:
   dateFormat: yyyy-MM-dd HH:mm:ss  # 统一日期转换格式
+
+file:
+  upload_path: /usr/local/mydata/swzl/files/upload
 
 mybatis:
   config-location: classpath:mybatis/mybatis.xml
   mapper-locations:
     - classpath:mybatis/mappers/*.xml
+
+server:
+  port: 8081

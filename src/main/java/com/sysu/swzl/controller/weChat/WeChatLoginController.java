@@ -3,6 +3,7 @@ package com.sysu.swzl.controller.weChat;
 import com.alibaba.fastjson.JSONObject;
 import com.sysu.swzl.common.R;
 import com.sysu.swzl.config.weChat.WeChatProperties;
+import com.sysu.swzl.constant.FileConstant;
 import com.sysu.swzl.service.WeChatService;
 import io.jsonwebtoken.impl.Base64Codec;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -71,7 +71,7 @@ public class WeChatServiceImpl implements WeChatService {
             return respVo == null ? R.error() : R.error(respVo.getErrcode(), respVo.getErrmsg());
 
         // 生成token，存用户信息到缓存中
-        String token = jwtUtil.generateTokenForWxAccount(respVo);
+        String token = jwtUtil.generateTokenForWxAccount(respVo.getOpenid(), respVo.getSession_key());
         // 先根据openid，查询近期登录次数，若次数在允许范围内，则查数据库有没有该用户信息，没有则添加该用户到数据库
         String openid = respVo.getOpenid();
         String openidKey = WeChatConstant.OPENID_KEY + openid;

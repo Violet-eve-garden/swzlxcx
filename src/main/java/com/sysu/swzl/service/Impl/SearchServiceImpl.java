@@ -97,5 +97,17 @@ public class SearchServiceImpl implements SearchService {
         return GoodsMessageRespVo.copyFromGoodMessagesList(goodsMessages);
     }
 
+    /**
+     * 查询openId对应的用户发布的失物信息
+     * @param openId
+     * @return
+     */
+    @Override
+    public List<GoodsMessageRespVo> searchGoodsInfoListByOpenId(String openId) {
+        List<GoodsMessage> goodsMessages = goodsMessageMapper.selectGoodsMessageByOpenIdInTimeOrder(openId, true);
+
+        return GoodsMessageRespVo.copyFromGoodMessagesList(goodsMessages);
+    }
+
 
 }

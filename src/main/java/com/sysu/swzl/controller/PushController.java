@@ -8,10 +8,13 @@ import com.sysu.swzl.service.CardsMessageService;
 import com.sysu.swzl.service.FileService;
 import com.sysu.swzl.service.GoodsMessageService;
 import com.sysu.swzl.utils.JwtUtil;
+import com.sysu.swzl.validate.AddGroup;
+import com.sysu.swzl.validate.UpdateGroup;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -69,7 +72,8 @@ public class PushController {
         log.info("uploadImg token: " + token);
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json;charset=UTF-8");
-        if (!jwtUtil.weChatVerifyToken(token)){
+        token = jwtUtil.weChatVerifyToken(token);
+        if (token == null){
             response.setStatus(HttpStatus.FORBIDDEN.value());
             response.getWriter().write("用户不合法");
             return;
@@ -87,12 +91,17 @@ public class PushController {
 
 
     @PostMapping("/submitInfo")
-    public R submitGoods (GoodsMessage goodsMessage) {
+    public R submitGoods (@Validated(AddGroup.class) GoodsMessage goodsMessage) {
         try {
             return goodsMessageService.addGoodsMessage(goodsMessage);
         } catch (Exception e) {
             e.printStackTrace();
             return R.error(BizCodeException.UNKNOWN_EXCEPTION.getCode(), BizCodeException.UNKNOWN_EXCEPTION.getMessage());
         }
+    }
+
+    @PostMapping("/updateInfo")
+    public R updateGoods (@Validated(UpdateGroup.class) GoodsMessage goodsMessage) {
+        return goodsMessageService.updateGoodsMessage(goodsMessage);
     }
 }

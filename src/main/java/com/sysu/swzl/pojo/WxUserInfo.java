@@ -13,26 +13,28 @@ import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 public class WxUserInfo  implements Serializable {
-    @Null
+    @Null(groups = {AddGroup.class, UpdateGroup.class})
     @Transient
     private Long id;
 
     @NotNull(groups = {AddGroup.class})
     @Null(groups = {UpdateGroup.class})
-    @Length(max = 200, message = "昵称过长")
+    @Length(max = 200, message = "昵称过长", groups = {AddGroup.class, UpdateGroup.class})
     private String nickName;
 
-    @NotNull
+    @NotNull(groups = {AddGroup.class, UpdateGroup.class})
     private String openId;
 
-
+    @Length(max = 20, message = "QQ不合法", groups = {AddGroup.class, UpdateGroup.class})
     private String qq;
 
+    @Length(max = 50, message = "微信号不合法", groups = {AddGroup.class, UpdateGroup.class})
     private String weixin;
 
+    @Length(max = 30, message = "电话号码不合法", groups = {AddGroup.class, UpdateGroup.class})
     private String phone;
 
-    @Null
+    @Null(groups = {AddGroup.class, UpdateGroup.class})
     @Transient
     private Byte type;
 

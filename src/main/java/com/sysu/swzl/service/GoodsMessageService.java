@@ -17,5 +17,11 @@ public interface GoodsMessageService {
      * @param goodsMessage
      * @return
      */
-    R addGoodsMessage(GoodsMessage goodsMessage) throws ExecutionException, InterruptedException;
+    R addGoodsMessage(GoodsMessage goodsMessage);
+
+    /**
+     * 修改失物信息
+     * @param goodsMessage
+     */
+    R updateGoodsMessage(GoodsMessage goodsMessage);
 }

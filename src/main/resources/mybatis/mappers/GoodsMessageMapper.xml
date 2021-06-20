@@ -99,10 +99,10 @@
         title = #{title,jdbcType=VARCHAR},
       </if>
       <if test="describe != null">
-        describe = #{describe,jdbcType=VARCHAR},
+        `describe` = #{describe,jdbcType=VARCHAR},
       </if>
       <if test="type != null">
-        type = #{type,jdbcType=VARCHAR},
+        `type` = #{type,jdbcType=VARCHAR},
       </if>
       <if test="inforType != null">
         infor_type = #{inforType,jdbcType=TINYINT},
@@ -120,8 +120,8 @@
     update goods_message
     set open_id = #{openId,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},
-      describe = #{describe,jdbcType=VARCHAR},
-      type = #{type,jdbcType=VARCHAR},
+      `describe` = #{describe,jdbcType=VARCHAR},
+      `type` = #{type,jdbcType=VARCHAR},
       infor_type = #{inforType,jdbcType=TINYINT},
       img_path = #{imgPath,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP}
@@ -148,5 +148,20 @@
     <include refid="Base_Column_List" />
     from `goods_message`
     where `type` = #{type}
+  </select>
+
+  <select id="selectGoodsMessageByOpenIdInTimeOrder" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from `goods_message`
+    where
+        `open_id` = #{openId}
+    order by `create_time`
+    <if test="order == true">
+      asc
+    </if>
+    <if test="order == false">
+      desc
+    </if>
   </select>
 </mapper>

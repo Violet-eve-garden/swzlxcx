@@ -9,7 +9,9 @@ public enum BizCodeException {
     VALID_EXCEPTION(10001, "参数校验异常"),
     TYPE_EXCEPTION(10002, "不可用类型异常"),
     FILE_UPLOAD_EXCEPTION(10003, "文件上传异常"),
-    FILENAME_EXCEPTION(10004, "文件名错误"),;
+    FILENAME_EXCEPTION(10004, "文件名错误"),
+    UPDATE_GOODS_EXCEPTION(10005, "非法修改失物信息"),
+    USER_INFO_EXCEPTION(10006, "用户信息未提交");
     private int code;
     private String message;
 

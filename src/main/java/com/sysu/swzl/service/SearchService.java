@@ -29,4 +29,11 @@ public interface SearchService {
      * @return
      */
     List<GoodsMessageRespVo> searchGoodsMessageListByType(String type);
+
+    /**
+     * 查询用户自己发布的消息
+     * @param openId
+     * @return
+     */
+    List<GoodsMessageRespVo> searchGoodsInfoListByOpenId(String openId);
 }

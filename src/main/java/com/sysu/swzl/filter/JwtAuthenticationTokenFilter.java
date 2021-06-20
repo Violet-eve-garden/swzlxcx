@@ -63,10 +63,11 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
             return;
         }
 
-        // 校验token (如果token合法会自动续期)
-        if (!jwtUtil.weChatVerifyToken(authToken)) {
-            response.getWriter().write(JSON.toJSONString(R.error(HttpStatus.FORBIDDEN.value(), "token过期")));
-            log.info("token过期");
+        // 校验token是否合法，如果不合法返回null，否则会返回最新的可用的token
+        authToken = jwtUtil.weChatVerifyToken(authToken);
+        if (authToken == null) {
+            response.getWriter().write(JSON.toJSONString(R.error(HttpStatus.FORBIDDEN.value(), "token不合法")));
+            log.info("token不合法");
             return;
         }
 
@@ -79,6 +80,8 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
             log.info("token缺失");
             return;
         }
+
+        response.addHeader("token", authToken);
 
         // token合法，获取相应的user信息
         BoundHashOperations<String, String, String> ops = redisTemplate.boundHashOps(WeChatConstant.WxJwtConstant.WX_TOKEN_CACHE_PREFIX + authToken);

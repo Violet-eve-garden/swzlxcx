@@ -27,4 +27,6 @@ public interface GoodsMessageMapper {
     List<GoodsMessage> selectGoodsMessageInTimeOrder(@Param("num") int num, @Param("order") boolean isAsc);
 
     List<GoodsMessage> selectByType(@Param("type") String type);
+
+    List<GoodsMessage> selectGoodsMessageByOpenIdInTimeOrder(@Param("openId") String openId, @Param("order") boolean isAsc);
 }

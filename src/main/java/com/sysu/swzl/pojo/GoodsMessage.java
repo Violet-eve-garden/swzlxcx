@@ -1,5 +1,7 @@
 package com.sysu.swzl.pojo;
 
+import com.sysu.swzl.validate.AddGroup;
+import com.sysu.swzl.validate.UpdateGroup;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,33 +13,34 @@ import javax.validation.constraints.Null;
 import java.util.Date;
 
 public class GoodsMessage {
-    @Null
+    @Null(groups = AddGroup.class)
+    @NotNull(groups = UpdateGroup.class)
     private Long id;
 
-    @NotNull
-    @Length(max = 100)
+    @NotNull(groups = {AddGroup.class, UpdateGroup.class})
+    @Length(max = 100, groups = {AddGroup.class, UpdateGroup.class})
     private String openId;
 
-    @NotNull
-    @Length(max = 100)
+    @NotNull(groups = {AddGroup.class, UpdateGroup.class})
+    @Length(max = 100, groups = {AddGroup.class, UpdateGroup.class})
     private String title;
 
-    @NotNull
-    @Length(max = 250)
+    @NotNull(groups = {AddGroup.class, UpdateGroup.class})
+    @Length(max = 250, groups = {AddGroup.class, UpdateGroup.class})
     private String describe;
 
-    @NotNull
-    @Length(max = 100)
+    @NotNull(groups = {AddGroup.class, UpdateGroup.class})
+    @Length(max = 100, groups = {AddGroup.class, UpdateGroup.class})
     private String type;
 
-    @NotNull
-    @Max(2)
+    @NotNull(groups = {AddGroup.class, UpdateGroup.class})
+    @Max(value = 2, groups = {AddGroup.class, UpdateGroup.class})
     private Integer inforType;
 
-    @Length(max = 200)
+    @Length(max = 200, groups = {AddGroup.class, UpdateGroup.class})
     private String imgPath;
 
-    @Null
+    @Null(groups = {AddGroup.class, UpdateGroup.class})
     private Date createTime;
 
     public GoodsMessage(Long id, String openId, String title, String describe, String type, Integer inforType, String imgPath, Date createTime) {

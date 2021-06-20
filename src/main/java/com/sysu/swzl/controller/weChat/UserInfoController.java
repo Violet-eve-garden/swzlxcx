@@ -2,6 +2,7 @@ package com.sysu.swzl.controller.weChat;
 
 import com.alibaba.fastjson.JSONObject;
 import com.sysu.swzl.common.R;
+import com.sysu.swzl.exception.BizCodeException;
 import com.sysu.swzl.pojo.WxUserInfo;
 import com.sysu.swzl.service.WeChatService;
 import com.sysu.swzl.validate.AddGroup;
@@ -11,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * 用户信息的Controller
@@ -25,15 +28,15 @@ public class UserInfoController {
     private WeChatService weChatService;
 
     @PostMapping("/searchInfo")
-    public String searchInfo (String openId){
+    public R searchInfo (String openId){
         if (!StringUtils.hasText(openId))
-            return JSONObject.toJSONString(R.error("需要传openId"));
+            return R.error("需要传openId");
 
         WxUserInfo userInfo = weChatService.searchUserInfo(openId);
-        if (userInfo == null)
-            return "{}";
+        if (userInfo == null || !StringUtils.hasText(userInfo.getNickName()))
+            return R.error(BizCodeException.USER_INFO_EXCEPTION.getCode(), BizCodeException.USER_INFO_EXCEPTION.getMessage());
 
-        return JSONObject.toJSONString(R.ok().put("user", userInfo));
+        return R.ok().put("user", userInfo);
     }
 
     @PostMapping("/addInfo")

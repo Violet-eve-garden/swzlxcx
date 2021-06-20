@@ -41,8 +41,9 @@ public class SearchController {
      * @return
      */
     @GetMapping("/searchDescribe")
-    public GoodsSpecificInfoRespVo searchSpecificInformation(@RequestParam("id") Long id){
-        return searchService.searchGoodsSpecificInfoById(id);
+    public R searchSpecificInformation(@RequestParam("id") Long id){
+        GoodsSpecificInfoRespVo respVo = searchService.searchGoodsSpecificInfoById(id);
+        return R.ok().put("data", respVo);
     }
 
     /**
@@ -53,5 +54,16 @@ public class SearchController {
         List<GoodsMessageRespVo> respVos = searchService.searchGoodsMessageListByType(type);
 
         return R.ok().put("list", respVos);
+    }
+
+    /**
+     * 查询用户发布的失物信息
+     * @param openId
+     * @return
+     */
+    @GetMapping("searchMyGoodsInfo")
+    public R searchMyGoodsInfo(@RequestParam("openId") String openId) {
+        List<GoodsMessageRespVo> goodsMessageRespVos = searchService.searchGoodsInfoListByOpenId(openId);
+        return R.ok().put("list", goodsMessageRespVos);
     }
 }

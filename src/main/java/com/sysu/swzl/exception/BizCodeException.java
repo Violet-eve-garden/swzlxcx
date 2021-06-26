@@ -11,7 +11,9 @@ public enum BizCodeException {
     FILE_UPLOAD_EXCEPTION(10003, "文件上传异常"),
     FILENAME_EXCEPTION(10004, "文件名错误"),
     UPDATE_GOODS_EXCEPTION(10005, "非法修改失物信息"),
-    USER_INFO_EXCEPTION(10006, "用户信息未提交");
+    USER_INFO_EXCEPTION(10006, "用户信息未提交"),
+    GOODS_INFO_NOTFOUND_EXCEPTION(10007, "失物消息不存在")
+    ;
     private int code;
     private String message;
 

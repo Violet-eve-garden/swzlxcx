@@ -24,4 +24,11 @@ public interface GoodsMessageService {
      * @param goodsMessage
      */
     R updateGoodsMessage(GoodsMessage goodsMessage);
+
+    /**
+     * 根据id修改失物状态为已被认领或未找到
+     * @param id
+     * @return
+     */
+    R updateGoodsStateById(Long id, String openId);
 }

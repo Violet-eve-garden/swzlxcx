@@ -46,6 +46,9 @@ public class UserInfoController {
 
     @PostMapping("/updateInfo")
     public R updateInfo (@Validated(UpdateGroup.class) WxUserInfo wxUserInfo){
+        WxUserInfoVo userInfo = weChatService.getUserInfo(wxUserInfo.getOpenId());
+        if (userInfo == null || !StringUtils.hasText(userInfo.getNickName()))
+            return R.error(BizCodeException.USER_INFO_EXCEPTION.getCode(), BizCodeException.USER_INFO_EXCEPTION.getMessage()).put("isAddSuccess", false);
         return weChatService.updateUserInfo(wxUserInfo);
     }
 }

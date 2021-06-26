@@ -6,7 +6,7 @@ target/
 
 image/
 logs/
-src/main/resources/application-private.yml
+src/main/resources/application-*Private*.yml
 
 ### STS ###
 .apt_generated

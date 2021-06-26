@@ -43,10 +43,14 @@ spring:
     host: 192.168.143.130
     port: 6379
     database: 1
+
+  jackson:
+    dateFormat: yyyy-MM-dd HH:mm:ss  # 统一日期转换格式
+
 server:
   port: 8080
   servlet:
-    context-path: /wxxcx
+    context-path: /swzl_war
 
 logging:
   level:
@@ -58,9 +62,6 @@ logging:
 
 file:
   upload_path: files/upload
-
-jackson:
-  dateFormat: yyyy-MM-dd HH:mm:ss  # 统一日期转换格式
 
 mybatis:
   config-location: classpath:mybatis/mybatis.xml

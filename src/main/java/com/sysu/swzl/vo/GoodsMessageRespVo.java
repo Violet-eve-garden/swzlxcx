@@ -20,12 +20,13 @@ public class GoodsMessageRespVo {
     private String title;
     private String describe;
     private Date time;
+    private Integer state;
 
     public static List<GoodsMessageRespVo> copyFromGoodMessagesList(List<GoodsMessage> goodsMessages){
         List<GoodsMessageRespVo> goodsMessageRespVos = new LinkedList<>();
         goodsMessages.forEach(goodsMessage -> {
             GoodsMessageRespVo goodsMessageRespVo = new GoodsMessageRespVo(goodsMessage.getId(), goodsMessage.getFileName(), goodsMessage.getTitle(), goodsMessage.getDescribe(),
-                    goodsMessage.getCreateTime());
+                    goodsMessage.getUpdateTime(), goodsMessage.getState());
             goodsMessageRespVos.add(goodsMessageRespVo);
         });
         return goodsMessageRespVos;

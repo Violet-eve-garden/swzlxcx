@@ -5,6 +5,7 @@ import com.sysu.swzl.common.R;
 import com.sysu.swzl.config.weChat.WeChatProperties;
 import com.sysu.swzl.constant.WeChatConstant;
 import com.sysu.swzl.dao.WxUserInfoMapper;
+import com.sysu.swzl.exception.BizCodeException;
 import com.sysu.swzl.pojo.WxUserInfo;
 import com.sysu.swzl.service.WeChatService;
 import com.sysu.swzl.utils.JwtUtil;
@@ -129,6 +130,7 @@ public class WeChatServiceImpl implements WeChatService {
     public R updateUserInfo(WxUserInfo wxUserInfo) {
         if (!verifyUserInfo(wxUserInfo))
             return R.error("数据不合法").put("isAddSuccess", false);
+
         wxUserInfoMapper.updateByOpenIdSelective(wxUserInfo);
         return R.ok().put("isAddSuccess", true);
     }
@@ -136,6 +138,22 @@ public class WeChatServiceImpl implements WeChatService {
     @Override
     public WxUserInfo searchUserInfo(String openId) {
         return wxUserInfoMapper.selectByOpenId(openId);
+    }
+
+    /**
+     * 根据openId校验用户信息，可用返回true，否则返回false。
+     * @param openId
+     * @return
+     */
+    @Override
+    public boolean canPush(String openId) {
+        if (!StringUtils.hasText(openId))
+            return false;
+
+        WxUserInfoVo userInfo = getUserInfo(openId);
+        if (userInfo == null)
+            return false;
+        return StringUtils.hasText(userInfo.getNickName()) && verifyUserInfo(userInfo);
     }
 
     /**
@@ -153,6 +171,7 @@ public class WeChatServiceImpl implements WeChatService {
         return StringUtils.hasText(qq) || StringUtils.hasText(phone)
                 || StringUtils.hasText(weixin) || StringUtils.hasText(other);
     }
+
 
     /**
      * 设置相应的权限信息

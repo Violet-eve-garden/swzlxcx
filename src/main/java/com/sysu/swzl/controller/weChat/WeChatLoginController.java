@@ -21,7 +21,7 @@ import java.util.Map;
  * @date 2021/5/23 15:15
  */
 @RestController
-@RequestMapping(produces = {"application/json;charset=UTF-8"})
+@RequestMapping(/*roduces = {"application/json;charset=UTF-8"}*/)
 public class WeChatLoginController {
 
     @Autowired

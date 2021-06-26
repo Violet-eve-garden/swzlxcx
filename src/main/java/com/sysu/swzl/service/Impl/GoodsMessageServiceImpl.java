@@ -10,7 +10,10 @@ import com.sysu.swzl.exception.BizCodeException;
 import com.sysu.swzl.pojo.GoodsMessage;
 import com.sysu.swzl.pojo.Type;
 import com.sysu.swzl.pojo.UploadFile;
+import com.sysu.swzl.pojo.WxUserInfo;
 import com.sysu.swzl.service.GoodsMessageService;
+import com.sysu.swzl.service.WeChatService;
+import com.sysu.swzl.vo.WxUserInfoVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -34,6 +37,9 @@ public class GoodsMessageServiceImpl implements GoodsMessageService {
 
     @Autowired
     private UploadFileMapper uploadFileMapper;
+
+    @Autowired
+    private WeChatService weChatService;
 
     @Autowired
     private TypeMapper typeMapper;
@@ -84,7 +90,10 @@ public class GoodsMessageServiceImpl implements GoodsMessageService {
             CompletableFuture.runAsync(() -> redisTemplate.delete(MessageConstant.LATEST_INFO_REDIS_KEY));
 
             // 保存物品失物信息
-            goodsMessage.setCreateTime(new Date());
+            Date now = new Date();
+            goodsMessage.setCreateTime(now);
+            goodsMessage.setUpdateTime(now);
+            goodsMessage.setState(MessageConstant.INIT_STATE);
             goodsMessageMapper.insertSelective(goodsMessage);
 
             return R.ok();
@@ -105,7 +114,6 @@ public class GoodsMessageServiceImpl implements GoodsMessageService {
     @Transactional
     public R updateGoodsMessage(GoodsMessage goodsMessage) {
         GoodsMessage oldGoods = goodsMessageMapper.selectByPrimaryKey(goodsMessage.getId());
-        System.out.println(oldGoods.toString());
         if (oldGoods == null || !oldGoods.getOpenId().equals(goodsMessage.getOpenId()))
             return R.error(BizCodeException.UPDATE_GOODS_EXCEPTION.getCode(), BizCodeException.UPDATE_GOODS_EXCEPTION.getMessage());
 
@@ -141,8 +149,8 @@ public class GoodsMessageServiceImpl implements GoodsMessageService {
             // 异步删除redis里的缓存数据，是否删除成功没影响
             CompletableFuture.runAsync(() -> redisTemplate.delete(MessageConstant.LATEST_INFO_REDIS_KEY));
 
-            // 不修改创建时间
-            goodsMessage.setCreateTime(oldGoods.getCreateTime());
+            // 修改更改时间
+            goodsMessage.setUpdateTime(new Date());
             // 保存修改的物品失物信息
             goodsMessageMapper.updateByPrimaryKeySelective(goodsMessage);
 
@@ -153,5 +161,25 @@ public class GoodsMessageServiceImpl implements GoodsMessageService {
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
             return R.error(BizCodeException.UNKNOWN_EXCEPTION.getCode(), "修改物品失物信息失败");
         }
+    }
+
+    /**
+     * 根据id修改失物状态
+     * @param id
+     * @return
+     */
+    @Override
+    @Transactional
+    public R updateGoodsStateById(Long id, String openId) {
+        GoodsMessage goodsMessage = goodsMessageMapper.selectByPrimaryKey(id);
+        // id对应的失物消息不存在或者openId不一致，返回错误信息
+        if (goodsMessage == null || goodsMessage.getOpenId() == null ||!goodsMessage.getOpenId().equals(openId))
+            return R.error(BizCodeException.GOODS_INFO_NOTFOUND_EXCEPTION.getCode(), BizCodeException.GOODS_INFO_NOTFOUND_EXCEPTION.getMessage());
+
+        goodsMessage.setState(MessageConstant.CHANGED_STATE);
+        int res = goodsMessageMapper.updateByPrimaryKeySelective(goodsMessage);
+        if (res > 0)
+            return R.ok();
+        return R.error(BizCodeException.UNKNOWN_EXCEPTION.getCode(), BizCodeException.UNKNOWN_EXCEPTION.getMessage());
     }
 }

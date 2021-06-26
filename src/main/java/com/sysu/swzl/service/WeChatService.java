@@ -42,4 +42,11 @@ public interface WeChatService {
      * @param wxUserInfo
      */
     void setAuthorities(WxUserInfoVo wxUserInfo);
+
+    /**
+     * 根据openId校验该用户是否可以进行相关操作
+     * @param openId
+     * @return
+     */
+    boolean canPush(String openId);
 }

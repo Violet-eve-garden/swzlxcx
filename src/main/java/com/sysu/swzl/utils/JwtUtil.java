@@ -1,13 +1,10 @@
 package com.sysu.swzl.utils;
 
 import com.sysu.swzl.constant.WeChatConstant;
-import com.sysu.swzl.vo.WxAccountResponseVo;
-import io.jsonwebtoken.*;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

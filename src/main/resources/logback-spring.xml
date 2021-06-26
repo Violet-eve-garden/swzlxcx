@@ -19,7 +19,7 @@
             <!--保留历史日志一个月的时间-->
             <maxHistory>30</maxHistory>
             <!--
-            Spring Boot默认情况下，日志文件10M时，会切分日志文件,这样设置日志文件会在100M时切分日志
+            Spring Boot默认情况下，日志文件10M时
             -->
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>10MB</maxFileSize>
@@ -38,7 +38,7 @@
             <!--保留历史日志一个月的时间-->
             <maxHistory>30</maxHistory>
             <!--
-            Spring Boot默认情况下，日志文件10M时，会切分日志文件,这样设置日志文件会在100M时切分日志
+            Spring Boot默认情况下，日志文件10M时
             -->
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>10MB</maxFileSize>
@@ -46,17 +46,45 @@
         </rollingPolicy>
     </appender>
 
-    <springProfile name="dev">
-        <root leval="INFO">
-            <appender-ref ref="CONSOLE" />
-            <appender-ref ref="DEV_TIME_FILE" />
-        </root>
-    </springProfile>
+    <!-- 生产环境下mybatis的日志文件输出 -->
+    <appender name="PRO_TIME_MYBATIS_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+        <file>${log-pro.path}/swzl-pro-mybatis.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log-pro.path}/swzl-pro-mybatis-%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <!--保留历史日志三个月的时间-->
+            <maxHistory>180</maxHistory>
+            <!--
+            Spring Boot默认情况下，日志文件10M时，会切分日志文件,这样设置日志文件会在100M时切分日志
+            -->
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
 
-    <springProfile name="prod">
-        <root leval="WARN">
+    <springProfile name="prod,prodPrivate">
+        <root level="WARN">
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="PRO_TIME_FILE" />
+        </root>
+        <logger name="com.sysu.swzl.service" additivity="false" level="INFO">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="PRO_TIME_FILE" />
+        </logger>
+        <logger name="org.mybatis" additivity="false" level="DEBUG">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="PRO_TIME_MYBATIS_FILE" />
+        </logger>
+    </springProfile>
+
+    <springProfile name="dev,devPrivate">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="DEV_TIME_FILE" />
         </root>
     </springProfile>
 </configuration>

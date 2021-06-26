@@ -35,10 +35,11 @@ public class GoodsSpecificInfoRespVo {
         private Date time;
         private Integer inforType;
         private String goodsType;
+        private Integer state;
 
         public static GoodsSpecificInfoRespVo.GoodsInfo copyFromGoodsMessage(GoodsMessage goodsMessage){
             return new GoodsInfo(goodsMessage.getId(), goodsMessage.getImgPath(), goodsMessage.getTitle(),
-                    goodsMessage.getDescribe(), goodsMessage.getCreateTime(), goodsMessage.getInforType(), goodsMessage.getType());
+                    goodsMessage.getDescribe(), goodsMessage.getUpdateTime(), goodsMessage.getInforType(), goodsMessage.getType(), goodsMessage.getState());
         }
     }
 

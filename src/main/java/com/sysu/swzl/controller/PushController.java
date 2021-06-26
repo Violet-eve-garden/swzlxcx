@@ -15,9 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
@@ -34,17 +32,12 @@ import java.io.IOException;
 @RequestMapping(path = {"/push"}, produces = {"application/json;charset=UTF-8"})
 public class PushController {
 
-    @Autowired
-    private CardsMessageService cardsMessageService;
 
     @Autowired
     private GoodsMessageService goodsMessageService;
 
     @Autowired
     private FileService fileService;
-
-    @Autowired
-    private StringRedisTemplate redisTemplate;
 
     @Autowired
     private JwtUtil jwtUtil;
@@ -71,8 +64,9 @@ public class PushController {
         String token = request.getParameter(FileConstant.TOKEN_PREFIX);
         log.info("uploadImg token: " + token);
         response.setCharacterEncoding("UTF-8");
-        response.setContentType("application/json;charset=UTF-8");
+        response.setContentType("text/json;charset=UTF-8");
         token = jwtUtil.weChatVerifyToken(token);
+        response.setHeader("token", token);
         if (token == null){
             response.setStatus(HttpStatus.FORBIDDEN.value());
             response.getWriter().write("用户不合法");
@@ -81,7 +75,7 @@ public class PushController {
 
         R res = fileService.saveImg(file);
         if (!res.isOk()) {
-            response.setStatus(BizCodeException.FILE_UPLOAD_EXCEPTION.getCode());
+            response.setStatus(HttpStatus.FORBIDDEN.value());
             response.getWriter().write((String) res.get("msg"));
             return;
         }
@@ -103,5 +97,10 @@ public class PushController {
     @PostMapping("/updateInfo")
     public R updateGoods (@Validated(UpdateGroup.class) GoodsMessage goodsMessage) {
         return goodsMessageService.updateGoodsMessage(goodsMessage);
+    }
+
+    @GetMapping("/updateGoodsState")
+    public R updateState (@RequestParam(name = "id") Long id, @RequestParam(name = "openId") String openId) {
+        return goodsMessageService.updateGoodsStateById(id, openId);
     }
 }

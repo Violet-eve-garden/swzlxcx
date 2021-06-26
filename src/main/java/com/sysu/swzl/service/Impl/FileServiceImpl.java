@@ -83,7 +83,7 @@ public class FileServiceImpl implements FileService {
             log.info("文件" + finalName + "保存失败");
             // 回滚事务
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            return R.error(BizCodeException.UNKNOWN_EXCEPTION.getCode(), "文件上传失败");
+            return R.error(BizCodeException.FILE_UPLOAD_EXCEPTION.getCode(), BizCodeException.FILE_UPLOAD_EXCEPTION.getMessage());
         } finally {
             try {
                 if(bis != null){

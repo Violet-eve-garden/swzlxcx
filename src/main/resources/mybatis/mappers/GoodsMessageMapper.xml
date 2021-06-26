@@ -11,10 +11,12 @@
       <arg column="infor_type" javaType="java.lang.Integer" jdbcType="TINYINT" />
       <arg column="img_path" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="state" javaType="java.lang.Integer" jdbcType="TINYINT" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
-    id, open_id, title, `describe`, `type`, infor_type, img_path, create_time
+    id, open_id, title, `describe`, `type`, infor_type, img_path, create_time, update_time, state
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
@@ -28,11 +30,12 @@
   </delete>
   <insert id="insert" parameterType="com.sysu.swzl.pojo.GoodsMessage">
     insert into goods_message (id, open_id, title, 
-      describe, type, infor_type, 
-      img_path, create_time)
+      `describe`, `type`, infor_type,
+      img_path, create_time, `update_time`, `state`)
     values (#{id,jdbcType=BIGINT}, #{openId,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
       #{describe,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{inforType,jdbcType=TINYINT}, 
-      #{imgPath,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+      #{imgPath,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
+      #{state,jdbcType=TINYINT})
   </insert>
   <insert id="insertSelective" parameterType="com.sysu.swzl.pojo.GoodsMessage">
     insert into goods_message
@@ -61,6 +64,12 @@
       <if test="createTime != null">
         create_time,
       </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -86,6 +95,12 @@
       </if>
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=TINYINT},
       </if>
     </trim>
   </insert>
@@ -113,6 +128,12 @@
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=TINYINT},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -124,7 +145,9 @@
       `type` = #{type,jdbcType=VARCHAR},
       infor_type = #{inforType,jdbcType=TINYINT},
       img_path = #{imgPath,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=TINYINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 
@@ -133,7 +156,7 @@
     select
     <include refid="Base_Column_List" />
     from `goods_message`
-    order by `create_time`
+    order by `update_time`
     <if test="order == true">
       asc
     </if>
@@ -156,7 +179,7 @@
     from `goods_message`
     where
         `open_id` = #{openId}
-    order by `create_time`
+    order by `update_time`
     <if test="order == true">
       asc
     </if>

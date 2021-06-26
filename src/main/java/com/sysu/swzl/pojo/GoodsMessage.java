@@ -43,7 +43,21 @@ public class GoodsMessage {
     @Null(groups = {AddGroup.class, UpdateGroup.class})
     private Date createTime;
 
-    public GoodsMessage(Long id, String openId, String title, String describe, String type, Integer inforType, String imgPath, Date createTime) {
+    @Null(groups = {AddGroup.class, UpdateGroup.class})
+    private Date updateTime;
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
+
+    @Null(groups = {AddGroup.class, UpdateGroup.class})
+    private Integer state;
+
+    public GoodsMessage(Long id, String openId, String title, String describe, String type, Integer inforType, String imgPath, Date createTime, Date updateTime, Integer state) {
         this.id = id;
         this.openId = openId;
         this.title = title;
@@ -52,6 +66,8 @@ public class GoodsMessage {
         this.inforType = inforType;
         this.imgPath = imgPath;
         this.createTime = createTime;
+        this.updateTime = updateTime;
+        this.state = state;
     }
 
     public GoodsMessage() {
@@ -133,5 +149,13 @@ public class GoodsMessage {
      */
     public void setFileName(String fileName) {
         this.imgPath = fileName == null ? null : fileName.trim();
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }

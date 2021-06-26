@@ -81,6 +81,8 @@ public class SearchServiceImpl implements SearchService {
     @Override
     public GoodsSpecificInfoRespVo searchGoodsSpecificInfoById(Long id) {
         GoodsMessage goodsMessage = goodsMessageMapper.selectByPrimaryKey(id);
+        if (goodsMessage == null)
+            return null;
         String openId = goodsMessage.getOpenId();
         WxUserInfo wxUserInfo = wxUserInfoMapper.selectByOpenId(openId);
         return new GoodsSpecificInfoRespVo(goodsMessage, wxUserInfo);
